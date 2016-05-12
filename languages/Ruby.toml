@@ -1,0 +1,13 @@
+name="Ruby"
+website="http://www.ruby-lang.org/"
+
+[HelloWorld]
+code = """
+puts "Hello, World!"
+"""
+
+[Variable]
+code = """
+a = 1
+b, c = 2, 3
+"""

@@ -1,0 +1,20 @@
+name="C#"
+website="http://www.ecma-international.org/publications/standards/Ecma-334.htm"
+
+[HelloWorld]
+code = """
+using System;
+public class Program
+{
+  public static void Main()
+  {
+    Console.WriteLine("Hello, World!");
+  }
+}
+"""
+
+[Variable]
+code = """
+int a = 1;
+int b = 2, c = 3;
+"""

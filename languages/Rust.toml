@@ -1,0 +1,18 @@
+name="Rust"
+website="https://www.rust-lang.org/"
+
+[HelloWorld]
+code = """
+fn main() {
+  println!("Hello, World!");
+}
+"""
+
+[Variable]
+code = """
+// immutable binding
+let a = 1;
+
+// mutable binding
+let mut b = 2;
+"""
