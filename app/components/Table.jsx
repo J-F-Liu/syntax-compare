@@ -32,7 +32,8 @@ export default class Table extends Component {
 
   render() {
     let loadedLanguages = this.props.languages
-      .filter(lang => Object.has(this.languages, lang)).map(lang => this.languages[lang]);
+      .filter(lang => Object.has(this.languages, lang))
+			.map(lang => this.languages[lang]);
     let constructs = [].union(...loadedLanguages.map(lang => Object.keys(lang).filter(key => Object.isObject(lang[key]))));
     return <table>
       <thead>

@@ -30,7 +30,7 @@ export default class CheckBoxList extends Component {
   };
 
   componentWillReceiveProps(nextProps) {
-    // this.setState({options: this.createValueDict(nextProps.values)});
+    this.setState({options: this.createOptionDict(nextProps.values)});
   }
 
   render() {

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {browserHistory} from 'react-router';
 import CheckBoxList from './CheckBoxList';
 import Table from './Table';
 
@@ -13,8 +14,21 @@ export default class App extends Component {
   state = {languages: ['CSharp', 'Rust']};
 
   languageChecked = (selectedLanguages) => {
-    this.setState({languages: selectedLanguages});
+    browserHistory.push('/?languages='+selectedLanguages.join(','));
   };
+
+  getSelectedLanguages(props) {
+    let languages = props.location.query.languages.split(',').compact(true);
+    this.setState({languages});
+  }
+
+  componentDidMount() {
+    this.getSelectedLanguages(this.props);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.getSelectedLanguages(nextProps);
+  }
 
   render() {
     return (
