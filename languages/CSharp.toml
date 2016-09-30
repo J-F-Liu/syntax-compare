@@ -4,6 +4,7 @@ website="http://www.ecma-international.org/publications/standards/Ecma-334.htm"
 [HelloWorld]
 code = """
 using System;
+
 public class Program
 {
   public static void Main()
@@ -13,8 +14,29 @@ public class Program
 }
 """
 
+[Comment]
+code = """
+// single line
+/*
+multi-line
+*/
+"""
+
 [Variable]
 code = """
 int a = 1;
 int b = 2, c = 3;
+"""
+
+[Function]
+code = """
+public static A identity<A>(A x) {
+    return x;
+}
+
+public static B first<A, B>(A x)
+    where A: Enumrable<B>, B: Nullable {
+    var iter = x.GetEnumerator();
+    return iter.next();
+}
 """

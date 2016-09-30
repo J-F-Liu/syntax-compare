@@ -16,3 +16,20 @@ let a = 1;
 // mutable binding
 let mut b = 2;
 """
+
+[Function]
+code = """
+pub fn identity<A>(x:A) -> A {
+    x
+}
+
+pub fn first<A, B>(x: A) -> Option<B>
+    where A: IntoIterator<Item = B> {
+    let mut iter = x.into_iter();
+    if let Some(one) = iter.next() {
+        Some(one)
+    } else {
+        None
+    }
+}
+"""
