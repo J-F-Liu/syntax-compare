@@ -8,6 +8,36 @@ fn main() {
 }
 """
 
+[Comment]
+code = """
+// single line
+/*
+multi-line
+*/
+"""
+
+[Literals]
+code = """
+'H' //Character
+"hello" //String
+r#""hello""# //Raw string
+r##"foo #"# bar"## //Raw string
+b'H' //Byte
+b"hello" //Byte string
+br#"hello"# //Raw byte string
+
+// Number literals
+98_222	//Decimal integer
+0xff	//Hex integer
+0o77	//Octal integer
+0b1111_0000	//Binary integer
+123.0E+77 //Floating-point
+
+//Boolean literals
+true
+false
+"""
+
 [Variable]
 code = """
 // immutable binding
