@@ -1,0 +1,102 @@
+name="Rust"
+website="https://www.rust-lang.org/"
+
+[HelloWorld]
+code = """
+fn main() {
+  println!("Hello, World!");
+}
+"""
+
+[Comment]
+code = """
+// single line
+/*
+multi-line
+*/
+"""
+
+[Literals]
+code = """
+'H' //Character
+"hello" //String
+r#""hello""# //Raw string
+r##"foo #"# bar"## //Raw string
+b'H' //Byte
+b"hello" //Byte string
+br#"hello"# //Raw byte string
+
+// Number literals
+98_222	//Decimal integer
+0xff	//Hex integer
+0o77	//Octal integer
+0b1111_0000	//Binary integer
+123.0E+77 //Floating-point
+
+//Boolean literals
+true
+false
+"""
+
+[Variable]
+code = """
+// immutable binding
+let a = 1;
+
+// mutable binding
+let mut b = 2;
+"""
+
+[Function]
+code = """
+pub fn identity<A>(x:A) -> A {
+    x
+}
+
+pub fn first<A, B>(x: A) -> Option<B>
+    where A: IntoIterator<Item = B> {
+    let mut iter = x.into_iter();
+    if let Some(one) = iter.next() {
+        Some(one)
+    } else {
+        None
+    }
+}
+"""
+
+[Closure]
+code = """
+let mut arr: Vec<i32> = vec![10, 15, 3];
+arr.sort_by_key(|a| (10 - a).abs());
+
+// multi-line closure
+let mut arr = vec![10, 15, 3];
+arr.sort_by_key(|a| {
+    let intermediate_value = some_function(a);
+    intermediate_value + 10
+});
+"""
+
+[If-Expresion]
+code = """
+let result = if some_condition { expensive_function() } else { 0 };
+"""
+
+[Enumerate]
+code = """
+let arr = vec!['a', 'b', 'c'];
+for (idx, val) in arr.iter().enumerate() {
+    println!("{}, {}", idx, val);
+}
+"""
+
+[Tuples]
+code = """
+let foo = ("foo", 1, None::<i32>);
+let (a, b, c) = foo;
+println!("{}", a); // "foo"
+println!("{}", foo.0); // "foo"
+
+let mut tup = (1, 2, 3);
+tup.0 = 4;
+"""

@@ -1,0 +1,30 @@
+name="Python"
+website="http://www.python.org/"
+
+
+
+[Closure]
+code = """
+arr = [3, 10, 15]
+sorted(arr, key=lambda x: abs(10-x))
+"""
+
+[If-Expresion]
+code = """
+result = expensive_function() if some_condition else None
+"""
+
+[Enumerate]
+code = """
+arr = ['a', 'b', 'c']
+for idx, val in enumerate(arr):
+    print("{}, {}".format(idx, val))
+"""
+
+[Tuples]
+code = """
+foo = ('foo', 1, None)
+a, b, c = foo
+assert a == 'foo'
+assert foo[0] == 'foo'
+"""

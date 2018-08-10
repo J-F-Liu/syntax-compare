@@ -1,0 +1,16 @@
+name="Kotlin"
+website="https://kotlinlang.org/"
+
+[HelloWorld]
+code = """
+package hello
+
+fun main(args: Array<String>) {
+   println("Hello, World!")
+}
+"""
+
+[Variable]
+code = """
+
+"""
