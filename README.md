@@ -1,2 +1,5 @@
 # Syntax Compare
-Source code of https://syntax-compare.firebaseapp.com/
+
+Compare syntax constructs of different languages.
+
+Demo: http://j-f-liu.github.io/syntax-compare/
