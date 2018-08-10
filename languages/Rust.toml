@@ -63,3 +63,40 @@ pub fn first<A, B>(x: A) -> Option<B>
     }
 }
 """
+
+[Closure]
+code = """
+let mut arr: Vec<i32> = vec![10, 15, 3];
+arr.sort_by_key(|a| (10 - a).abs());
+
+// multi-line closure
+let mut arr = vec![10, 15, 3];
+arr.sort_by_key(|a| {
+    let intermediate_value = some_function(a);
+    intermediate_value + 10
+});
+"""
+
+[If-Expresion]
+code = """
+let result = if some_condition { expensive_function() } else { 0 };
+"""
+
+[Enumerate]
+code = """
+let arr = vec!['a', 'b', 'c'];
+for (idx, val) in arr.iter().enumerate() {
+    println!("{}, {}", idx, val);
+}
+"""
+
+[Tuples]
+code = """
+let foo = ("foo", 1, None::<i32>);
+let (a, b, c) = foo;
+println!("{}", a); // "foo"
+println!("{}", foo.0); // "foo"
+
+let mut tup = (1, 2, 3);
+tup.0 = 4;
+"""
