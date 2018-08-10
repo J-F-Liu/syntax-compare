@@ -6,6 +6,7 @@ import Table from './Table';
 export default class App extends Component {
   static languages = [
     {text: "C#", value: 'CSharp'},
+    "Python",
     "Ruby",
     "Rust",
     "Kotlin",
